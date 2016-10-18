@@ -32,4 +32,9 @@ const saveDocReadyCallback = function(callback) {
   }
 };
 
+
+document.addEventListener(DOMContentLoaded, () => {
+  documentReady = true;
+  documentReadyCallbacks.forEach(callback => callback());
+});
 window.$l = $l;
