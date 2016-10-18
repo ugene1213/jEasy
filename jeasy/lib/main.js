@@ -23,6 +23,52 @@ const $l = function(arg) {
   return new DomNodeCollection(arrayify);
 };
 
+$l.ajax = args => {
+  const req = new XMLHttpRequest();
+  const defaults = {
+    method: "GET",
+    url: "";
+    success: () => {},
+    error: () => {},
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    data: {}
+  };
+
+  args = $l.extend(defaults, args);
+  options.method = options.method.toUpperCase();
+
+  if (args.method === "GET"){
+    args.url += "?" + toQueryString(args.data);
+  }
+
+  req.open(options.method, options.url, true);
+
+  req.onload = event => {
+    if (req.status === 200) {
+      args.success(req.response);
+    } else {
+      args.error(req.response);
+    }
+  };
+
+
+  req.send(JSON.stringify(options.data));
+
+};
+
+
+const makeQueryString = (obj) => {
+  let query = "";
+
+  for (let property in obj) {
+      if (obj.hasOwnProperty(property)) {
+        result += property + "=" + obj[property] + "&";
+      }
+  }
+
+  return query.substring(0,query.length - 1);
+};
+
 
 const saveDocReadyCallback = function(callback) {
   if (documentReady === false) {
