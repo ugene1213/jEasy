@@ -20,7 +20,7 @@ Add the following script in the head of your HTML file:
 
 ```
 
-##Features
+## Features
 
 The most essential aspect of this  this library is the `$l` function, which provides different utility depending on the type of the argument that is passed in. These arguments include:
 
@@ -43,7 +43,7 @@ const $allElements = $l("li");
 $l(() => console.log("The DOM has fully loaded!"););
 ```
 
-##Useful Methods From the API
+## Useful Methods From the API
 
 jEasy has many useful methods that supplement the core features described above. Some of these include:
 
