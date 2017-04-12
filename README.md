@@ -62,9 +62,9 @@ $elements.addClass("ingredients"); // <li class="ingredients">xxx</li>
 For other methods, please consult the code in the docs.
 
 
-##Making Ajax requests
+## Making Ajax requests
 
-JEasy's ajax method uses the XMLHttpRequest API to send and receive data from a server:
+jEasy's ajax method uses the XMLHttpRequest API to send and receive data from a server:
 ```javascript
    $l.ajax({
      url: "api.openweathermap.org/data/2.5/weather?zip=10001,us",
