@@ -1,6 +1,6 @@
 # jEasy
 
-jEasy is a library that I implemented that supports basic DOM manipulation, ajax requests, and event handling.
+jEasy is a library that I implemented that supports basic DOM manipulation, AJAX requests, and event handling.
 
 ## Using This Library
 
@@ -16,7 +16,7 @@ Run webpack on your local machine in the console so that all necessary files are
 Add the following script in the head of your HTML file:
 
 ```html
-<src type="text/javascript" src="${Path to this file}/lib/jEasy.js">
+<src type="text/javascript" src="${Path to this file}/jEasy.js">
 
 ```
 
