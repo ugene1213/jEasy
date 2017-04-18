@@ -24,7 +24,7 @@ Add the following script in the head of your HTML file:
 
 The most essential aspect of this library is the `$l` function, which provides different utility depending on the type of the argument that is passed in. These arguments include:
 
-1. CSS selector - This returns a JEasyQuery object that contains an array of all the HTML elements that match the provided selector:
+1. CSS selector - This returns a DOMNodeCollection object that contains an array of all the HTML elements that match the provided selector:
 
 ```javascript
 const $allElements = $l("li");
@@ -48,7 +48,7 @@ let $elements = $l("li");
 $elements.addClass("ingredients"); // <li class="ingredients">xxx</li>
 ```
 
-2. children() - returns all the descendants of the DOM elements as a JEasyQuery object .
+2. children() - returns all the descendants of the DOM elements as a DOMNodeCollection object .
 
 3. find(selector) - finds all appearances of the 'selector' element in the DOM elements.
 
@@ -57,7 +57,7 @@ For other methods, please consult the code in the docs.
 
 ## Making Ajax requests
 
-jEasy's ajax method uses the XMLHttpRequest API to send and receive data from a server:
+jEasy's AJAX method uses the XMLHttpRequest API to send and receive data from a server:
 ```javascript
    $l.ajax({
      url: "api.openweathermap.org/data/2.5/weather?zip=10001,us",
