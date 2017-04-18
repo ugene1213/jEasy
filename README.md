@@ -24,20 +24,13 @@ Add the following script in the head of your HTML file:
 
 The most essential aspect of this  this library is the `$l` function, which provides different utility depending on the type of the argument that is passed in. These arguments include:
 
-1. HTML element - This will create an HTML element and wrap the element in a `JEasyQuery` object
-
-```javascript
-const $element = $l("<li>hello</li>");
-```
-
-
-2. CSS selector - This returns a JEasyQuery object that contains an array of all the HTML elements that match the provided selector:
+1. CSS selector - This returns a JEasyQuery object that contains an array of all the HTML elements that match the provided selector:
 
 ```javascript
 const $allElements = $l("li");
 ```
 
-3. Function - This saves the function and runs when the DOM is ready:
+2. Function - This saves the function and runs when the DOM is ready:
 
 ```javascript
 $l(() => console.log("The DOM has fully loaded!"););
