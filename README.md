@@ -22,7 +22,7 @@ Add the following script in the head of your HTML file:
 
 ## Features
 
-The most essential aspect of this  this library is the `$l` function, which provides different utility depending on the type of the argument that is passed in. These arguments include:
+The most essential aspect of this library is the `$l` function, which provides different utility depending on the type of the argument that is passed in. These arguments include:
 
 1. CSS selector - This returns a JEasyQuery object that contains an array of all the HTML elements that match the provided selector:
 
