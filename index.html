@@ -17,25 +17,41 @@
     <h1>This is a Demonstration of JEasy</h1>
 
     <aside class="">
-
+      <h2>Code being executed:</h2>
     </aside>
 
     <h2>Adding Classes using $l</h2>
     <ul>
-      <li id="cool">This should turn blue </li>
+      <li id="turn-blue">This should turn blue </li>
+      <li id='turn-off-blue'>This should turn these guys back to normal</li>
+      <li id='remove-events'> This should remove all events(try clicking the two previous events)</li>
     </ul>
 
   </body>
 
   <article class="">
     <script type="text/javascript">
-      $l('#cool').on('click', () => {
+      $l('#turn-blue').on('click', () => {
         $l('li').addClass('blue');
-        $l('li').html('yay it changed to blue');
         $l('aside').html(`l('li').addClass('blue');<br/>
         $l('li').html('yay it changed to blue');
         `);
+        $l('#turn-blue').html('yay it changed to blue');
+        $l('#turn-off-blue').html('This should turn these guys back to normal');
+        // $l('#turn-blue').off('click');
       });
+      $l('#turn-off-blue').on('click', () => {
+        $l('li').removeClass('blue');
+        $l('#turn-off-blue').html(`And now we're back to normal`);
+        $l('aside').html(`$l('li').removeClass('blue');<br/>
+        $l('li').html("And now we're back to normal");
+        `);
+        $l('#turn-blue').html('This should turn blue');
+      });
+      $l('#remove-events').on('click', () => {
+        $l('li').off('click');
+        $l('aside').html(`$l('li').off('click');`);
+      })
     </script>
   </article>
 </html>

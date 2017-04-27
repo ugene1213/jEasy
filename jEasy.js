@@ -179,8 +179,12 @@ class DOMNodeCollection {
   off(type, listener) {
 
     this.array.forEach(node => {
-      node.removeEventListener(type, listener);
       const handlerKey = `jEasy key - ${type}`;
+      if(node[handlerKey]) {
+        node[handlerKey].forEach(handler => {
+          node.removeEventListener(type,handler);
+        });
+      }
       node[handlerKey] = [];
     });
   }
