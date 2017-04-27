@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src='./jEasy.js'></script>
+    <link rel="stylesheet" href="assets/main.css" media="screen" title="no title">
+    <link rel="stylesheet" href="assets/reset.css" media="screen" title="no title">
+    <script type="text/javascript">
+      function codeType() {
+
+      }
+    </script>
+    <title></title>
+  </head>
+  <body>
+
+    <h1>This is a Demonstration of JEasy</h1>
+
+    <aside class="">
+
+    </aside>
+
+    <h2>Adding Classes using $l</h2>
+    <ul>
+      <li id="cool">This should turn blue </li>
+    </ul>
+
+  </body>
+
+  <article class="">
+    <script type="text/javascript">
+      $l('#cool').on('click', () => {
+        $l('li').addClass('blue');
+        $l('li').html('yay it changed to blue');
+        $l('aside').html(`l('li').addClass('blue');<br/>
+        $l('li').html('yay it changed to blue');
+        `);
+      });
+    </script>
+  </article>
+</html>
