@@ -18,6 +18,9 @@
 
     <aside class="">
       <h2>Code being executed:</h2>
+      <div class="code-executed">
+
+      </div>
     </aside>
 
     <h2>Adding Classes using $l</h2>
@@ -31,9 +34,10 @@
 
   <article class="">
     <script type="text/javascript">
+      window.$l = $l;
       $l('#turn-blue').on('click', () => {
         $l('li').addClass('blue');
-        $l('aside').html(`l('li').addClass('blue');<br/>
+        $l('.code-executed').html(`l('li').addClass('blue');<br/>
         $l('li').html('yay it changed to blue');
         `);
         $l('#turn-blue').html('yay it changed to blue');
@@ -43,14 +47,14 @@
       $l('#turn-off-blue').on('click', () => {
         $l('li').removeClass('blue');
         $l('#turn-off-blue').html(`And now we're back to normal`);
-        $l('aside').html(`$l('li').removeClass('blue');<br/>
+        $l('.code-executed').html(`$l('li').removeClass('blue');<br/>
         $l('li').html("And now we're back to normal");
         `);
         $l('#turn-blue').html('This should turn blue');
       });
       $l('#remove-events').on('click', () => {
         $l('li').off('click');
-        $l('aside').html(`$l('li').off('click');`);
+        $l('.code-executed').html(`$l('li').off('click');`);
       })
     </script>
   </article>
